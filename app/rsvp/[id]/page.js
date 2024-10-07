@@ -1,4 +1,4 @@
-export default function Rsvp({ params }) {
+export default function Page({ params }) {
   return (
     <div>
       <h1>RSVP</h1>
