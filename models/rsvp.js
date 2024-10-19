@@ -12,6 +12,4 @@ const rsvpSchema = new Schema(
   }
 );
 
-const Rsvp = mongoose.models.Rsvp || mongoose.model("Rsvp", rsvpSchema);
-
-export default Rsvp;
+export default mongoose.models.Rsvp || mongoose.model("Rsvp", rsvpSchema);
