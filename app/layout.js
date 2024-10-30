@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="p5 max-w-6xl mx-auto bg-white min-h-screen">
+        <div className="max-w-6xl mx-auto min-h-screen my-9 p-5">
           <Header font={allura.className} />
           <Navbar />
           {children}
