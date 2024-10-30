@@ -1,11 +1,12 @@
 "use client";
+import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
   { name: "Home", href: "/" },
   { name: "Story", href: "/story" },
-  { name: "Schedule", href: "/" },
+  { name: "Schedule", href: "/schedule" },
   { name: "RSVP", href: "/rsvp" },
   { name: "Travel", href: "/travel" },
   { name: "Wedding Party", href: "/weddingparty" },
@@ -13,14 +14,17 @@ const links = [
 ];
 export default function Navbar() {
   const pathname = usePathname();
+
   return (
-    <nav className="flex justify-between items-center px-6 py-3">
+    <nav className="flex justify-evenly px-11 py-3">
       {links.map((link) => {
         return (
           <Link
             key={link.name}
             href={link.href}
-            className="flex h-[48px] grow items-center justify-center rounded-md text-md hover:bg-purple-100 md:flex-none md:justify-start md:p-2 md:px-3"
+            className={clsx("px-1.5 pb-0.5 hover:border-b-2 border-b-green", {
+              "pb0.5 px-1.5 border-b-2 border-b-green": pathname === link.href,
+            })}
           >
             {link.name}
           </Link>

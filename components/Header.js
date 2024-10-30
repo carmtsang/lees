@@ -7,6 +7,7 @@ export default function Header({ font }) {
         <br /> &<br />
         Rowan
       </h1>
+      <p>May 24, 2025 - Vancouver B.C</p>
     </div>
   );
 }
