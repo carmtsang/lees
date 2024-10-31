@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { name: "Home", href: "/" },
+  { name: "RSVP", href: "/rsvp" },
   { name: "Story", href: "/story" },
   { name: "Schedule", href: "/schedule" },
-  { name: "RSVP", href: "/rsvp" },
   { name: "Travel", href: "/travel" },
   { name: "Wedding Party", href: "/weddingparty" },
   { name: "Q & A", href: "/questions" },
@@ -16,7 +16,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-evenly px-11 py-3">
+    <nav className="flex justify-evenly px-11 py-3 mb-6">
       {links.map((link) => {
         return (
           <Link
