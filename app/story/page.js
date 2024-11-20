@@ -1,16 +1,17 @@
+"use client";
 import Divider from "@/components/divider";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 export default function Page() {
   return (
     <div>
       <div className="relative flex justify-center items-center p-3">
-        <Image
-          src="/wedgemount.jpeg"
-          width={667}
-          height={500}
-          className="w-100vw md:w-3/4"
-          alt="Carmen & Rowan camping"
+        <CldImage
+          src="story-JygTt0is_dg8pl2"
+          width={500}
+          height={667}
+          className="w-100vw md:w-3/4 lg:w-1/2"
+          alt="Carmen & Rowan"
         />
       </div>
       <Divider />
