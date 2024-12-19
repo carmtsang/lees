@@ -9,3 +9,19 @@ export async function POST(req) {
   await Rsvp.create({ firstName, lastName, email, rsvp });
   return NextResponse.json({ message: "RSVP created" }, { status: 201 });
 }
+
+export async function GET() {
+  await connectMongoDB();
+
+  const rsvps = await Rsvp.find();
+  return NextResponse.json({ rsvps });
+}
+
+export async function DELETE(req) {
+  const id = req.nextUrl.searchParams.get("id");
+
+  await connectMongoDB();
+  await Rsvp.findByIdAndDelete(id);
+
+  return NextResponse.json({ message: "RSVP deleted" }, { status: 200 });
+}
