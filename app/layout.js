@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={inter.className}>
         <div className="max-w-6xl mx-auto min-h-screen my-9 p-5">
           <Header font={allura.className} />
           <Navbar />
