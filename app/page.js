@@ -17,8 +17,8 @@ export default function Home() {
         </div>
         <Divider />
         <div className="px-6">
-          <h3>Saturday, May 25, 2024</h3>
-          <p>Aberthau Mansion, 4397 W 2nd Ave, Vancouver</p>
+          <h2>Saturday, May 25, 2024</h2>
+          <h3>Aberthau Mansion, 4397 W 2nd Ave, Vancouver</h3>
           {/* Countdown goes here */}
 
           <p>We can&#39;t wait to share our special day with you.</p>

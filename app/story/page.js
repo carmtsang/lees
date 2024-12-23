@@ -15,7 +15,7 @@ export default function Page() {
         />
       </div>
       <Divider />
-      <div className="px-56 text-center">
+      <div className="mx-2 px-10 md:px-36 lg:px-56">
         <div>
           <h2>Story</h2>
           <p>
@@ -45,7 +45,7 @@ export default function Page() {
           <p>- Carmen</p>
         </div>
         <div className="text-left">
-          <h2 className="text-center">Tidbits</h2>
+          <h2>Tidbits</h2>
           <p>
             How did you first meet? <br /> See Our Story!
           </p>

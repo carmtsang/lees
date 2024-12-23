@@ -16,7 +16,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-evenly px-11 py-3 mb-6">
+    <nav className="flex justify-evenly px-11 py-3 mb-6 mx-6">
       {links.map((link) => {
         return (
           <Link

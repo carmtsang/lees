@@ -8,5 +8,19 @@
     font-family: allura;
     font-weight: 600;
     padding: 1rem;
+    text-align: center;
+  }
+
+  h3 {
+    @apply text-3xl;
+    font-family: allura;
+    text-align: center;
+  }
+
+  p {
+    font-family: Garamond, Georgia, serif;
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 1em;
   }
 }
