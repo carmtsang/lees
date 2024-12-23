@@ -2,7 +2,36 @@
 import Divider from "@/components/divider";
 import { CldImage } from "next-cloudinary";
 
+const tidbits = [
+  {
+    id: 1,
+    question: "How did you first meet?",
+    answer: "See Our Story!",
+  },
+  {
+    id: 2,
+    question: "Who made the first Move? How? ",
+    answer: "Rowan did, by adding me on Facebook.",
+  },
+  {
+    id: 3,
+    question: "Who's going to take out the trash?",
+    answer: "I want to say Rowan, but it is usually a 2 person job.",
+  },
+];
+
 export default function Page() {
+  const getTidbits = (tidbits) => {
+    return tidbits.map((tidbit) => {
+      return (
+        <p key={tidbit.id}>
+          <strong>{tidbit.question}</strong>
+          <br />
+          {tidbit.answer}
+        </p>
+      );
+    });
+  };
   return (
     <div>
       <div className="relative flex justify-center items-center p-3">
@@ -46,47 +75,7 @@ export default function Page() {
         </div>
         <div className="text-left">
           <h2>Tidbits</h2>
-          <p>
-            How did you first meet? <br /> See Our Story!
-          </p>
-          <p>
-            Who made the first Move? How? <br />
-            Rowan did, by adding me on Facebook.
-          </p>
-          <p>
-            Who&#39;s going to take out the trash? <br />I want to say Roawn,
-            but it is usually a 2 person job.
-          </p>
-          <p>
-            What was your most memorable date? <br />
-            Doing the Urban Grind and grabbing beers at the top.
-          </p>
-          <p>
-            What&#39;s your favorite activity together?
-            <br />
-            Going Hiking or on overnight hikes
-          </p>
-          <p>
-            Where are you going for your honeymoon? <br /> Likely Japan
-          </p>
-          <p>
-            What&#39;s the best meal you have eaten together?
-            <br />
-            In London, for Rowan&#39;s birthday. I treated him to this Thai
-            fusion restaurant. I still think about that meal.
-          </p>
-          <p>
-            What&#39;s the most memorable trip you have taken together?
-            <br />
-            Most memorable, and our first trip together, the West Coast Trail
-          </p>
-          <p>
-            The most spontaneous thing we&#39;ve done
-            <br />
-            We went bungee jumping in Whistler. This was before we had a car, on
-            Friday, we decided to do it and booked a shuttle bus for early the
-            next day to go!
-          </p>
+          {getTidbits(tidbits)}
         </div>
       </div>
     </div>
